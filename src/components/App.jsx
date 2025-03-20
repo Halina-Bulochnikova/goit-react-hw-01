@@ -1,32 +1,26 @@
-import Product from "./Product.jsx";
-import Button from "./Button.jsx";
-import Foto from "../assets/salad (1).jpg"
+import Profile from "./Profile";
+import TransactionHistory from "../components/TransactionHistory";
+import userData from "../userData.json";
+import FriendList from "../components/FriendList";
+import transactions from "../transactions.json";
+import friends from "../friends.json";
 
- 
-export default function Eats() {
-   return (
-     <div>
-      
-       <h1>Best selling</h1> 
-       <img src={Foto} style={fotoStyle}/>
-       
-       <Button>Click</Button>
-       <Product
-         name="Tacos With Lime"
-         imgUrl="https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg?dpr=2&h=480&w=640"
-         price={10.99}
-       />
-       <Product
-         name="Fries and Burger"
-         imgUrl="https://images.pexels.com/photos/70497/pexels-photo-70497.jpeg?dpr=2&h=480&w=640"
-         price={14.29}
-       />    
-     </div>
-   );
- }
+  const App = () => {
+    return (
+        <>
+        <Profile
+          name={userData.username}
+          tag={userData.tag}
+          location={userData.location}
+          image={userData.avatar}
+          stats={userData.stats}
+        />
+        <FriendList friends={friends} />
+        <>
+        <TransactionHistory items={transactions} />
+    </>
+      </>
+    );
+  };
+ export default App;
 
-const fotoStyle = {
-        height: 800,
-        width: 1440,
-        padding: 36,
-}
