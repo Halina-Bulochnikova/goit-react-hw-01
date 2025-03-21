@@ -5,16 +5,19 @@
     margin-bottom: 20px;
     margin-top: 24px;
     text-align: center;
+    border: 3px solid black;
+    display: grid;
+    place-items: start center;
   }
   
   .profile img {
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
     border: 2px solid #ddd;
     margin-bottom: 10px;
     background-color: #333;
-    margin-left: 60px;
+    
   }
   
   .profile h2 {
@@ -30,13 +33,14 @@
   }
   
   .stats {
+    width: 100%;
     display: flex;
     justify-content: space-around;
+    align-items: flex-end;
     background: #aca9a9;
-    border-radius: 5px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
     list-style-type: none;
-    border: black;
-    
   }
   
   .statItem {
@@ -47,7 +51,8 @@
     border: 2px solid #808080;
     flex: 1;
     border-bottom: none;
-    
-
-
+    border-left: none;
+  }
+  .statItem:last-child {
+    border-right: none;
   }
