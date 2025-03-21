@@ -1,0 +1,25 @@
+.transaction-history {
+    width: 100%;
+    max-width: 600px;
+    border-collapse: collapse;
+    background: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .transaction-history th, .transaction-history td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+  }
+  
+  .transaction-history th {
+    background: #007bff;
+    color: white;
+  }
+  
+  .transaction-history tr:nth-child(even) {
+    background: #f2f2f2;
+  }
+  
